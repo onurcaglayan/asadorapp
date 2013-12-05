@@ -6,6 +6,8 @@ body
 {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 14px;
+	background-color: #781800;
+	color: #fff;
 }
 
 header
@@ -14,14 +16,26 @@ header
 	right: 0;
 	left: 0;
 	top: 0;
-	box-shadow: 0 1px 0 rgba(255,255,255,.1);
-	border-color: #463265;
-	background-color: #563d7c;
+	border-bottom: 2px solid #F07830;
+	background-color: #4878A8;
 	display: block;
 	clear: both;
 	padding: 10px;
 	height: 30px;
-	border: 1px solid transparent;
+	z-index: 1;
+}
+
+
+footer
+{
+	padding-left: 40px;
+	padding-top: 8px;
+	bottom: 0px;
+	z-index: 2;
+	height: 15px;
+	font-weight: bold;
+	font-size: 12px;
+	margin-top: 80px;
 }
 
 a
@@ -32,7 +46,7 @@ a
 nav ul
 {
 	float: right;
-	margin-right: 20px;
+	margin-right: 50px;
 }
 
 nav ul li
@@ -43,7 +57,7 @@ nav ul li
 
 nav ul li a
 {
-	color: #cdbfe3;
+	color: #A8D8F0;
 }
 
 nav ul li a:hover
@@ -56,13 +70,13 @@ nav ul li a:hover
 	padding-right: 15px;
 	padding-left: 15px;
 	margin: 10px;
-	min-width: 310px;
+	min-width: 360px;
 }
 
 .logo-link
 {
 	color:#fff;
-	font-size: 18px;
+	font-size: 20px;
 	margin-left: 10px;
 	float: left;
 	line-height: 12px;
@@ -72,13 +86,62 @@ nav ul li a:hover
 
 .main-content
 {
-	background-color: gray;
 	height: 100%;
-	top:52px;
-	position: relative;
 }
 
-.main-content p
+.main-content #public
 {
-	height: 100px;
+	margin: 40px;
+    display: none;
+}
+
+.main-content #public h1
+{
+	font-size: 70px;
+	line-height: 1;
+	color: #fff;
+	margin-bottom: 20px;
+	margin-top: 80px;
+}
+
+.main-content #public a
+{
+	width: 278px;
+	height: 44px;
+}
+
+.main-content #public a
+{
+	display: block;
+	background: url('../img/facebookconnectsprite.png') no-repeat;
+	background-position: -0px -0px; 
+	width: 280px; 
+	height: 47px; 
+}
+
+.main-content #public a:hover
+{
+	display: block;
+	background: url('../img/facebookconnectsprite.png') no-repeat;
+	background-position: -0px -47px;
+	width: 280px;
+	height: 47px; 
+}
+
+#main-container 
+{
+	position: relative;
+	top: 52px;
+}
+
+#intro
+{
+	font-size: 20px;
+	max-width: 600px;
+	margin-bottom: 20px;
+	color: #A8D8F0;
+}
+
+#logged {
+    display:none;
 }
