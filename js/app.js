@@ -1,4 +1,4 @@
 ﻿$(document).ready(function () {
-    App.init();
+    Asador.init();
 
 });
