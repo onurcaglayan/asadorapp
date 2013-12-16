@@ -19,15 +19,24 @@ var FacebookApi =  (function($) {
         var that = this;
 
         FB.getLoginStatus(function(response) {
-          that.setLoginInfo(response.authResponse);
-          that.isLogged = response.status === 'connected';
-          if (that.isLogged) {
+
+          var isLogged = fbLoginStatusResponse(response);
+
+          if (isLogged) {
             promiseOnGetStatus.resolve(response.authResponse);
           } else {
             promiseOnGetStatus.reject(response.authResponse);
           }
         });
         return promiseOnGetStatus;
+      },
+
+      fbLoginStatusResponse : function (response) {
+
+          this.setLoginInfo(response.authResponse);
+          this.isLogged = response.status === 'connected';
+
+          return this.isLogged;
       },
 
       login: function() {
